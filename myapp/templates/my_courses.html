@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>My Courses</h2>
+<div id="mycourses"></div>
+
+<script>
+fetch('/api/my-courses/')
+.then(res => res.json())
+.then(data => {
+    mycourses.innerHTML = data
+      .map(c => `<p><a href="/courses/${c.id}/">${c.title}</a></p>`)
+      .join('')
+})
+</script>
+
+{% endblock %}

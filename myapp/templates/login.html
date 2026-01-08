@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+
+<div class="container">
+    <h2>Login</h2>
+
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+
+    <button onclick="loginUser()">Login</button>
+
+    <p>New user?
+        <a href="{% url 'register' %}">Register</a>
+    </p>
+</div>
+<script src="{% static 'js/login.js' %}"></script>
+</body>
+</html>

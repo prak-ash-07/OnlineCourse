@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2 id="title"></h2>
+<p id="content"></p>
+
+<script>
+fetch(`/api/lessons/{{ lesson_id }}/`)
+.then(res => res.json())
+.then(data => {
+    title.innerText = data.title
+    content.innerText = data.content
+})
+</script>
+
+{% endblock %}
