@@ -60,8 +60,15 @@ REST APIs are used to fetch course and lesson data.
 
 Frontend communicates with backend APIs using JavaScript (fetch).
 
-- GET /api/courses/ – List all courses
-- GET /api/courses/<id>/ – Course details with lessons
-- POST /api/enroll/ – Enroll user in a course
-- GET /api/lessons/<id>/ – View lesson and track progress
+- POST /register/                     - Register a new user
+- POST /login/                        - Login
+
+- POST /courses/                      - Create course
+- GET /courses/<course_id>/           - read course
+- POST /courses/<course_id>/enroll/   - Enroll in a course
+- GET /my-courses/                    - my list of course
+- POST /api/enroll/                   – Enroll user in a course
+- GET /lessons/<lesson_id>/           - View lesson and track progress
+
+
 
